@@ -43,7 +43,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
 
 .title {
@@ -57,6 +57,14 @@
   z-index: 0;
 }
 
+.headshot-photo {
+  width: 200px;         /* Set the width you actually want */
+  height: 200px;        /* Match the width for a square */
+  object-fit: cover;    /* Ensures the face isn't squashed */
+  border-radius: 0%;   /* Optional: makes it a circle */
+  margin: 20px 0;       /* Adds some breathing room around it */
+}
+
 .content-overlay {
   position: fixed;
   z-index: 10;
@@ -67,6 +75,9 @@
   flex-direction: column;
   color: rgb(0, 0, 0);
   pointer-events: none; 
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .interactive-content {
