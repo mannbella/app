@@ -1,17 +1,6 @@
-import './App.css';
 import Layout from './Layout';
-import FuzzyText from './components/FuzzyText';
 import PillNav from './components/PillNav';
-import Logo from './assets/batman.jpg'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './About';
-import Portfolio from './Portfolio';
-
-const FUZZ_PROPS = {
-  baseIntensity: 0.2,
-  hoverIntensity: 0.5,
-  enableHover: true
-}
+import Logo from './assets/batman.jpg';
 
 const PILL_PROPS = {
   logo: Logo,
@@ -28,31 +17,21 @@ const PILL_PROPS = {
   initialLoadAnimation: false
 }
 
-function App() {
-  return (
-    <Router>
+function Portfolio() {
+return (
       <div className="liquid-ether-container">
         <Layout>
           <main className="content-overlay">
             <div className="interactive-content">
               <PillNav{...PILL_PROPS}></PillNav>
-              <Routes>
-                <Route path="/" element={
-                  <>
-                  <FuzzyText {...FUZZ_PROPS}>
-                  welcome
-                  </FuzzyText>
-                  </>
-                }/>
-                <Route path="/about" element={<About />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-              </Routes>
+              <a className="App-link" href="https://github.com/mannbella" target="_blank" rel="noopener noreferrer">
+                Bella's Github
+              </a>
             </div>
           </main>
         </Layout>
       </div>
-    </Router>
   );
 }
 
-export default App;
+export default Portfolio;
