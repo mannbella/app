@@ -6,6 +6,7 @@ import Logo from './assets/batman.jpg'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './About';
 import Portfolio from './Portfolio';
+import { Element, scroller, animateScroll as scroll } from 'react-scroll';
 
 const FUZZ_PROPS = {
   baseIntensity: 0.2,
@@ -35,13 +36,27 @@ function App() {
         <Layout>
           <main className="content-overlay">
             <div className="interactive-content">
-              <PillNav{...PILL_PROPS}></PillNav>
+              <PillNav {...PILL_PROPS}></PillNav>
               <Routes>
                 <Route path="/" element={
                   <>
-                  <FuzzyText {...FUZZ_PROPS}>
-                  welcome
-                  </FuzzyText>
+                  <Element className="welcome-section">
+                    <FuzzyText {...FUZZ_PROPS}>
+                    welcome
+                    </FuzzyText>
+                  </Element>
+                  
+                  <Element className="main-text">
+                    <div class="text-div">
+                      something something
+                    </div>
+                  </Element>
+                  
+                  <Element name="more-content">
+                    <div className="text-div" style={{height: '100vh'}}>
+                      More content here
+                    </div>
+                  </Element>
                   </>
                 }/>
                 <Route path="/about" element={<About />} />
