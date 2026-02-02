@@ -6,7 +6,7 @@ import Logo from './assets/batman.jpg'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './About';
 import Portfolio from './Portfolio';
-import { Element, scroller, animateScroll as scroll } from 'react-scroll';
+import { Element } from 'react-scroll';
 
 const FUZZ_PROPS = {
   baseIntensity: 0.2,

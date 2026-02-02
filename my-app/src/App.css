@@ -30,13 +30,38 @@ body {
   overflow: hidden;    /* Prevents the grid from causing scrollbars */
 }
 
-.headshot-photo, .App-link {
+.headshot-photo {
+  position: static;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.about-text{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-link {
   height: 100px;
   width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.aboutSplit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 100%;
+  padding: 0 5%;
+  margin-top: 50px;
 }
 
 .liquid-ether-container {
@@ -69,6 +94,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .text-div {
   background-color: white;
   border-radius: 15px;
